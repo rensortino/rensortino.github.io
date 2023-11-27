@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+        
+    <header class="bg-blue-500 h-[75vh] flex items-center justify-center divide-x">
+        <div class="flex w-2/5 h-1/5 py-8  justify-center items-center">
+                <img class="w-4/5 rounded-full" src="/assets/images/propic.jpeg" alt="Profile Picture">
+        </div>
+
+        <div class="flex flex-col pl-8 justify-center items-center">
+            <h1 class="text-5xl text-white font-bold">Renato Sortino</h1>
+            <p class="text-lg text-white mt-4">Ph.D. in Computer Vision.</p>
+            <ul class="flex py-8">
+                <li class="mr-6">mail</li>
+                <li class="mr-6">github</li>
+                <li class="mr-6">linkedin</li>
+                <li class="mr-6">medium</li>
+                <li class="mr-6">scholar</li>
+            </ul>
+        </div>
+    </header>
+    
+    <nav class="sticky top-0 bg-gray-800 text-white py-2">
+        <ul class="flex justify-end px-8">
+            <li class="hover:text-indigo-500 underline mr-6"><a href="#about">About</a></li>
+            <li class="hover:text-indigo-500 underline mr-6"><a href="#projects">Projects</a></li>
+            <li class="hover:text-indigo-500 underline mr-6"><a href="#publications">Publications</a></li>
+            <li class="hover:text-indigo-500 underline mr-6"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="space-y-16 py-16 flex flex-col items-center">
+            <section class="w-4/5" id="about">
+                <!-- <div class="h-10"></div> -->
+                <h2 class="text-4xl">About Me</h2>
+                <hr />
+                <p>I graduated with a Ph.D. in Computer Vision ath the University of Catania under the supervision of Professor Concetto Spampinato</p>
+                <p>I worked on generative models conditioned on different types of input, with applications in radio astronomy</p>
+            </section>
+    
+            <section class="w-4/5" id="projects">
+                <h2 class="text-4xl mb-16">Projects</h2>
+                <div class="flex grid place-content-evenly justify-items-around grid-cols-3">
+                    <a href="https://rensortino.github.io/trf-sg2im/" class="flex flex-col w-11/12 justify-around text-center border-bottom-4 rounded-3xl shadow-lg shadow-indigo-500/50 border-indigo-500">
+                        <img class="object-scale-down w-auto border-none rounded-3xl"  src="assets/images/trf-sg2im.gif">
+                        <h2 class="text-3xl">trf-sg2im</h2>
+                        <p>Project description</p>
+                    </a>
+                    <a href="https://rensortino.github.io/radiff/" class="flex flex-col w-11/12 justify-around text-center border-bottom-4 rounded-3xl shadow-lg shadow-indigo-500/50 border-indigo-500">
+                        <img class="object-cover w-auto border-none rounded-3xl" src="assets/images/radiff.gif">
+                        <div>
+                            <h3 class="text-3xl py-8">RADiff</h3>
+                            <p>Project description</p>
+                        </div>
+                    </a>
+                    <a href="https://gvecchio.com/matfuse/" class="w-11/12 py-8 text-center border-bottom-4 rounded-3xl shadow-lg shadow-indigo-500/50 border-indigo-500 my-4">
+                        <img class="object-cover w-auto border-none rounded-3xl" src="assets/images/trf-sg2im.gif">
+                        <h3 class="text-3xl py-8">MatFuse</h3>
+                        <p>Project description</p>
+                    </a>
+                </div>
+            </section>
+            
+            <section class="w-4/5 flex flex-col" id="publications">
+                <h2 class="text-4xl mb-16">Selected Publications</h2>
+                <ul>
+                    <li></li>
+                </ul>
+                <div class="flex justify-between">
+                    <img class="border-none rounded-3xl w-4/12 place-self-start"  src="assets/images/trf-sg2im.gif">
+                    <div class="flex flex-col w-3/5">
+                        <div class="flex flex-col justify-around mb-8">
+                            <h3 class="text-xl">Transformer-Based Image Generation from Scene Graphs</h3>
+                            <p class="italic"><span class="font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
+                            <p>Computer Vision and Image Understanding (Elsevier)</p>
+                            <ul class="flex">
+                                <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017">Paper</a></li>
+                                <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://rensortino.github.io/trf-sg2im/">Project Page</a></li>
+                                <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://github.com/perceivelab/trf-sg2im/">Code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <img class="border-none rounded-3xl w-4/12 place-self-start"  src="assets/images/radiff.gif">
+                    <div class="flex flex-col w-3/5">
+                        <div class="flex flex-col justify-around mb-8">
+                            <h3 class="text-xl">RADiff: Controllable Diffusion Models for Radio Astronomical Maps Generation</h3>
+                            <p class="italic">Giuseppe Vecchio, <span class="font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
+                            <p>Under Review</p>
+                            <ul class="flex">
+                                <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://arxiv.org/pdf/2307.02392">Paper</a></li>
+                                <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://rensortino.github.io/radiff/">Project Page</a></li>
+                                <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://github.com/SKA-INAF/radiff">Code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <img class="border-none rounded-3xl w-4/12 place-self-start"  src="assets/images/matfuse.jpeg">
+                    <div class="flex flex-col w-3/5">
+                        <div class="flex flex-col justify-around mb-8">
+                            <h3 class="text-xl">MatFuse: Controllable Material Generation with Diffusion Models</h3>
+                            <p class="italic">Giuseppe Vecchio, <span class="font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
+                            <p>Under Review</p>
+                            <ul class="flex">
+                                <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://arxiv.org/abs/2308.11408">Paper</a></li>
+                                <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://gvecchio.com/matfuse/">Project Page</a></li>
+                                <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://github.com/giuvecchio/matfuse">Code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="w-4/5" id="contact">
+                <h2 class="text-4xl">Contact</h2>
+                <p>You can reach me at <a class="text-indigo-500" href="mailto:rensortino@gmail.com">rensortino[at]gmail[dot]com</a></p>
+            </section>
+    </main>
+
+    <footer id="footer" class="text-center py-5">
+        <p>&copy; Renato Sortino</p>
+    </footer>
+</body>
+</html>

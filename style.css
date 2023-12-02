@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (min-width: 768px) {
+    .collapse.dont-collapse-md {
+      display: block;
+      height: auto !important;
+      visibility: visible;
+    }
+  }

@@ -33,26 +33,26 @@
             <section class="tw-w-4/5 tw-py-8" id="about">
                 <!-- <div class="tw-h-10"></div> -->
                 <h2 class="tw-text-3xl tw-mb-8 md:tw-text-4xl">About Me</h2>
-                <p>I graduated with a Ph.D. in Computer Vision ath the University of Catania under the supervision of Professor Concetto Spampinato</p>
-                <p>I worked on generative models conditioned on different types of input, with applications in radio astronomy</p>
+                <p class="tw-py-2 md:tw-text-xl">I graduated with a Ph.D. in Computer Vision ath the University of Catania under the supervision of Professor Concetto Spampinato</p>
+                <p class="tw-py-2 md:tw-text-xl">I worked on generative models conditioned on different types of input, with applications in radio astronomy</p>
             </section>
     
             <section class="tw-w-4/5 tw-pb-8" id="projects">
                 <h2 class="tw-text-3xl tw-pb-8 md:tw-text-4xl">Projects</h2>
                 <!-- <div class="tw-flex tw-flex-wrap md:tw-grid md:tw-place-content-evenly md:tw-justify-items-around md:tw-grid-cols-3"> -->
                 <div class="tw-flex tw-flex-wrap">
-                    <div class="tw-flex tw-flex-col tw-min-w-fit  tw-justify-around tw-text-center tw-rounded-3xl tw-shadow-lg tw-shadow-indigo-500/50 tw-mb-10">
+                    <div class="tw-flex tw-flex-col tw-min-w-fit tw-justify-around tw-text-center tw-rounded-3xl tw-shadow-lg tw-shadow-indigo-500/50 tw-mb-10">
                         <img class="tw-object-scale-down tw-w-full tw-rounded-t-3xl"  src="assets/images/trf-sg2im.gif">
                         <div class="tw-flex tw-justify-center">
                             <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc1">
                                 <h2 class="tw-p-2 tw-text-2xl tw-font-bold">TRF-SG2IM</h2>
-                                <i class="bi bi-caret-right-fill"></i>
+                                <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                             </div>
                         </div>
-                        <div class="collapse tw-py-2" id="proj-desc1">
-                            <p class="tw-text-sm tw-text-slate-500 tw-p-2">A generative model conditioned on scene graphs and fully-based on transformers</p>
+                        <div class="collapse dont-collapse-md md:show tw-py-2" id="proj-desc1">
+                            <p class="tw-text-sm md:tw-text-lg tw-text-slate-500 tw-p-2">A generative model conditioned on scene graphs and fully-based on transformers</p>
                             <a href="https://rensortino.github.io/trf-sg2im" class="tw-border-t tw-border-indigo-500/20">
-                                <div class="tw-border-t tw-border-indigo-500/20 tw-text-indigo-500 tw-p-1" >Project Page</div>
+                                <div class="tw-border-t md:tw-text-lg tw-border-indigo-500/20 tw-text-indigo-500 tw-p-1" >Project Page</div>
                             </a>
                         </div>
                     </div>
@@ -63,27 +63,27 @@
                 </div>
             </section>
             
-            <section class="tw-w-4/5 tw-pb-8 tw-flex tw-flex-col" id="publications">
-                <h2 class="tw-text-4xl tw-pb-8">Selected Publications</h2>
+            <section class="tw-w-4/5 tw-pb-8 tw-flex tw-flex-col tw-items-center" id="publications">
+                <h2 class="tw-text-4xl tw-pb-8 tw-self-start">Selected Publications</h2>
 
-                    <div class="tw-flex tw-flex-col tw-justify-between tw-items-center md:tw-flex-row">
+                    <div class="tw-flex tw-flex-col tw-max-w-max tw-justify-between tw-items-center md:tw-flex-row">
                         <div class="tw-w-full tw-hidden md:block md:tw-w-4/12">
                             <img class="border-none tw-rounded-3xl tw-w-full place-self-start"  src="assets/images/trf-sg2im.gif">
                         </div>
                             <div class="tw-flex tw-flex-col tw-text-center tw-w-full tw-justify-around">
-                                <div class="tw-flex">
-                                    <h3 class="tw-py-1 tw-text-lg md:tw-text-xl">Transformer-Based Image Generation from Scene Graphs</h3>
+                                <div class="tw-flex tw-justify-center">
+                                    <h3 class="tw-py-1 tw-text-lg md:tw-text-xl lg:tw-text-2xl xl:tw-text-3xl 2xl:tw-text-4xl">Transformer-Based Image Generation from Scene Graphs</h3>
                                     <button type="button" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#desc1">
-                                        <i class="bi bi-caret-right-fill"></i>
+                                        <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                                     </button>
                                 </div>
-                                <div class="collapse" id="desc1">
-                                    <p class="tw-py-1 tw-text-sm italic"><span class="tw-font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
-                                    <p class="tw-py-1 tw-text-sm tw-text-slate-500">Computer Vision and Image Understanding (Elsevier)</p>
-                                    <ul class="tw-flex tw-items-center tw-justify-between tw-py-2">
-                                        <li class="tw-text-indigo-500 tw-text-sm tw-font-bold tw-rounded-2xl tw-p-2"><a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017">Paper</a></li>
-                                        <li class="tw-text-indigo-500 tw-text-sm tw-font-bold tw-rounded-2xl tw-p-2"><a href="https://rensortino.github.io/trf-sg2im/">Project Page</a></li>
-                                        <li class="tw-text-indigo-500 tw-text-sm tw-font-bold tw-rounded-2xl tw-p-2"><a href="https://github.com/perceivelab/trf-sg2im/">Code</a></li>
+                                <div class="collapse dont-collapse-md" id="desc1">
+                                    <p class="tw-py-1 tw-text-sm md:tw-text-md lg:tw-text-lg xl:tw-text-xl 2xl:tw-text-2xl italic"><span class="tw-font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
+                                    <p class="tw-py-1 tw-text-sm md:tw-text-md lg:tw-text-lg xl:tw-text-xl 2xl:tw-text-2xl tw-text-slate-500">Computer Vision and Image Understanding (Elsevier)</p>
+                                    <ul class="tw-flex tw-items-center tw-justify-evenly tw-py-2">
+                                        <li class="tw-text-indigo-500 md:tw-text-md lg:tw-text-lg xl:tw-text-xl 2xl:tw-text-2xl tw-font-bold tw-rounded-2xl tw-p-2"><a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017">Paper</a></li>
+                                        <li class="tw-text-indigo-500 md:tw-text-md lg:tw-text-lg xl:tw-text-xl 2xl:tw-text-2xl tw-font-bold tw-rounded-2xl tw-p-2"><a href="https://rensortino.github.io/trf-sg2im/">Project Page</a></li>
+                                        <li class="tw-text-indigo-500 md:tw-text-md lg:tw-text-lg xl:tw-text-xl 2xl:tw-text-2xl tw-font-bold tw-rounded-2xl tw-p-2"><a href="https://github.com/perceivelab/trf-sg2im/">Code</a></li>
                                     </ul>
                                 </div>
                             </div>

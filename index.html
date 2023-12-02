@@ -3,141 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Renato Sortino</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body>
         
-    <header class="bg-blue-500 h-[75vh] flex items-center justify-center divide-x">
-        <div class="flex w-2/5 h-1/5 py-8  justify-center items-center">
-                <img class="w-4/5 rounded-full" src="/assets/images/propic.jpeg" alt="Profile Picture">
+    <header class="tw-bg-blue-500 tw-h-screen tw-flex tw-flex-col md:tw-flex-row tw-place-items-center tw-justify-center md:tw-divide-x">
+        <div class="tw-flex tw-w-4/5 tw-max-w-[400px] md:tw-w-2/5 tw-p-8 tw-items-center">
+                <img class="tw-w-full tw-rounded-full" src="/assets/images/propic.jpeg" alt="Profile Picture">
         </div>
 
-        <div class="flex flex-col pl-8 justify-center items-center">
-            <h1 class="text-5xl text-white font-bold">Renato Sortino</h1>
-            <p class="text-lg text-white mt-4">Ph.D. in Computer Vision.</p>
-            <ul class="flex py-8">
-                <li class="mr-6 hover:text-indigo-500"><a href="https://github.com/rensortino" class="bi bi-github text-5xl text-white"></a></li>
-                <li class="mr-6 hover:text-indigo-500"><a href="" class="bi bi-linkedin text-5xl text-white"></a></li>
-                <li class="mr-6 hover:text-indigo-500"><a href="" class="bi bi-medium text-5xl text-white"></a></li>
-                <li class="mr-6 hover:text-indigo-500"><a href="" class="ai ai-google-scholar text-5xl text-white"></a></li>
+        <div class="tw-flex tw-flex-col tw-pl-8 tw-h-min tw-items-center tw-justify-center">
+            <h1 class="tw-text-3xl md:tw-text-5xl tw-text-white tw-font-bold">Renato Sortino</h1>
+            <p class="tw-text-lg md:tw-text-2xl tw-text-white md:tw-mt-4">Ph.D. in Computer Vision.</p>
+            <a class="tw-text-slate-100 md:tw-text-xl" href="mailto:rensortino@gmail.com">rensortino [at] gmail [dot] com</a>
+            <ul class="tw-flex tw-pt-4 md:tw-pt-8">
+                <li class="tw-mr-6 hover:tw-text-indigo-500"><a href="https://github.com/rensortino" class="bi bi-github tw-text-3xl md:tw-text-5xl tw-text-white"></a></li>
+                <li class="tw-mr-6 hover:tw-text-indigo-500"><a href="" class="bi bi-linkedin tw-text-3xl md:tw-text-5xl tw-text-white"></a></li>
+                <li class="tw-mr-6 hover:tw-text-indigo-500"><a href="" class="bi bi-medium tw-text-3xl md:tw-text-5xl tw-text-white"></a></li>
+                <li class="tw-mr-6 hover:tw-text-indigo-500"><a href="" class="ai ai-google-scholar tw-text-3xl md:tw-text-5xl tw-text-white"></a></li>
             </ul>
         </div>
     </header>
-    
-    <nav class="sticky top-0 bg-gray-800 text-white py-2">
-        <ul class="flex justify-end px-8">
-            <li class="hover:text-indigo-500 underline mr-6"><a href="#about">About</a></li>
-            <li class="hover:text-indigo-500 underline mr-6"><a href="#projects">Projects</a></li>
-            <li class="hover:text-indigo-500 underline mr-6"><a href="#publications">Publications</a></li>
-            <li class="hover:text-indigo-500 underline mr-6"><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <main class="space-y-16 py-16 flex flex-col items-center">
-            <section class="w-4/5" id="about">
-                <!-- <div class="h-10"></div> -->
-                <h2 class="text-4xl">About Me</h2>
-                <hr />
+    <main class="tw-flex tw-flex-col tw-items-center">
+            <section class="tw-w-4/5 tw-py-8" id="about">
+                <!-- <div class="tw-h-10"></div> -->
+                <h2 class="tw-text-3xl tw-mb-8 md:tw-text-4xl">About Me</h2>
                 <p>I graduated with a Ph.D. in Computer Vision ath the University of Catania under the supervision of Professor Concetto Spampinato</p>
                 <p>I worked on generative models conditioned on different types of input, with applications in radio astronomy</p>
             </section>
     
-            <section class="w-4/5" id="projects">
-                <h2 class="text-4xl mb-16">Projects</h2>
-                <div class="flex grid place-content-evenly justify-items-around grid-cols-3">
-                    <a href="https://rensortino.github.io/trf-sg2im/" class="flex flex-col w-11/12 justify-around text-center border-bottom-4 rounded-3xl shadow-lg shadow-indigo-500/50 border-indigo-500">
-                        <img class="object-scale-down w-auto border-none rounded-3xl"  src="assets/images/trf-sg2im.gif">
-                        <h2 class="text-3xl">trf-sg2im</h2>
-                        <p>Project description</p>
-                    </a>
-                    <a href="https://rensortino.github.io/radiff/" class="flex flex-col w-11/12 justify-around text-center border-bottom-4 rounded-3xl shadow-lg shadow-indigo-500/50 border-indigo-500">
-                        <img class="object-cover w-auto border-none rounded-3xl" src="assets/images/radiff.gif">
-                        <div>
-                            <h3 class="text-3xl py-8">RADiff</h3>
-                            <p>Project description</p>
+            <section class="tw-w-4/5 tw-pb-8" id="projects">
+                <h2 class="tw-text-3xl tw-pb-8 md:tw-text-4xl">Projects</h2>
+                <!-- <div class="tw-flex tw-flex-wrap md:tw-grid md:tw-place-content-evenly md:tw-justify-items-around md:tw-grid-cols-3"> -->
+                <div class="tw-flex tw-flex-wrap">
+                    <div class="tw-flex tw-flex-col tw-min-w-fit  tw-justify-around tw-text-center tw-rounded-3xl tw-shadow-lg tw-shadow-indigo-500/50 tw-mb-10">
+                        <img class="tw-object-scale-down tw-w-full tw-rounded-t-3xl"  src="assets/images/trf-sg2im.gif">
+                        <div class="tw-flex tw-justify-center">
+                            <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc1">
+                                <h2 class="tw-p-2 tw-text-2xl tw-font-bold">TRF-SG2IM</h2>
+                                <i class="bi bi-caret-right-fill"></i>
+                            </div>
                         </div>
-                    </a>
-                    <a href="https://gvecchio.com/matfuse/" class="w-11/12 py-8 text-center border-bottom-4 rounded-3xl shadow-lg shadow-indigo-500/50 border-indigo-500 my-4">
-                        <img class="object-cover w-auto border-none rounded-3xl" src="assets/images/trf-sg2im.gif">
-                        <h3 class="text-3xl py-8">MatFuse</h3>
-                        <p>Project description</p>
+                        <div class="collapse tw-py-2" id="proj-desc1">
+                            <p class="tw-text-sm tw-text-slate-500 tw-p-2">A generative model conditioned on scene graphs and fully-based on transformers</p>
+                            <a href="https://rensortino.github.io/trf-sg2im" class="tw-border-t tw-border-indigo-500/20">
+                                <div class="tw-border-t tw-border-indigo-500/20 tw-text-indigo-500 tw-p-1" >Project Page</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a class="tw-flex tw-w-full tw-justify-end" href="https://rensortino.github.io/projects/">
+                        <h2 class="tw-p-2 tw-border tw-rounded-2xl tw-border-indigo-500">More</h2>
                     </a>
                 </div>
             </section>
             
-            <section class="w-4/5 flex flex-col" id="publications">
-                <h2 class="text-4xl mb-16">Selected Publications</h2>
-                <ul>
-                    <li></li>
-                </ul>
-                <div class="flex flex-col justify-around">
-                    <div class="flex justify-between items-center p-8">
-                        <div class="w-4/12">
-                            <img class="border-none rounded-3xl w-full place-self-start"  src="assets/images/trf-sg2im.gif">
+            <section class="tw-w-4/5 tw-pb-8 tw-flex tw-flex-col" id="publications">
+                <h2 class="tw-text-4xl tw-pb-8">Selected Publications</h2>
+
+                    <div class="tw-flex tw-flex-col tw-justify-between tw-items-center md:tw-flex-row">
+                        <div class="tw-w-full tw-hidden md:block md:tw-w-4/12">
+                            <img class="border-none tw-rounded-3xl tw-w-full place-self-start"  src="assets/images/trf-sg2im.gif">
                         </div>
-                        <div class="flex flex-col w-3/5">
-                            <div class="flex flex-col justify-around mb-8">
-                                <h3 class="text-xl">Transformer-Based Image Generation from Scene Graphs</h3>
-                                <p class="italic"><span class="font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
-                                <p>Computer Vision and Image Understanding (Elsevier)</p>
-                                <ul class="flex">
-                                    <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017">Paper</a></li>
-                                    <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://rensortino.github.io/trf-sg2im/">Project Page</a></li>
-                                    <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://github.com/perceivelab/trf-sg2im/">Code</a></li>
-                                </ul>
+                            <div class="tw-flex tw-flex-col tw-text-center tw-w-full tw-justify-around">
+                                <div class="tw-flex">
+                                    <h3 class="tw-py-1 tw-text-lg md:tw-text-xl">Transformer-Based Image Generation from Scene Graphs</h3>
+                                    <button type="button" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#desc1">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                    </button>
+                                </div>
+                                <div class="collapse" id="desc1">
+                                    <p class="tw-py-1 tw-text-sm italic"><span class="tw-font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
+                                    <p class="tw-py-1 tw-text-sm tw-text-slate-500">Computer Vision and Image Understanding (Elsevier)</p>
+                                    <ul class="tw-flex tw-items-center tw-justify-between tw-py-2">
+                                        <li class="tw-text-indigo-500 tw-text-sm tw-font-bold tw-rounded-2xl tw-p-2"><a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017">Paper</a></li>
+                                        <li class="tw-text-indigo-500 tw-text-sm tw-font-bold tw-rounded-2xl tw-p-2"><a href="https://rensortino.github.io/trf-sg2im/">Project Page</a></li>
+                                        <li class="tw-text-indigo-500 tw-text-sm tw-font-bold tw-rounded-2xl tw-p-2"><a href="https://github.com/perceivelab/trf-sg2im/">Code</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
                     </div>
-                    <div class="flex justify-between p-8">
-                        <div class="w-4/12">
-                            <img class="border-none rounded-3xl w-full place-self-start"  src="assets/images/radiff.gif">
-                        </div>
-                        <div class="flex flex-col w-3/5">
-                            <div class="flex flex-col justify-around mb-8">
-                                <h3 class="text-xl">RADiff: Controllable Diffusion Models for Radio Astronomical Maps Generation</h3>
-                                <p class="italic"><span class="font-bold">Renato Sortino</span>, Thomas Cecconello, Giuseppe Fiameni, Andrea De Marco et al.</p>
-                                <p>Under Review</p>
-                                <ul class="flex">
-                                    <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://arxiv.org/pdf/2307.02392">Paper</a></li>
-                                    <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://rensortino.github.io/radiff/">Project Page</a></li>
-                                    <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://github.com/SKA-INAF/radiff">Code</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    
                     </div>
-                    <div class="flex justify-between p-8">
-                        <div class="w-4/12">
-                            <img class="w-full border-none rounded-3xl place-self-start"  src="assets/images/matfuse.jpeg">
-                        </div>
-                        <div class="flex flex-col w-3/5 justify-around">
-                            <div class="flex flex-col mb-8">
-                                <h3 class="text-xl">MatFuse: Controllable Material Generation with Diffusion Models</h3>
-                                <p class="italic">Giuseppe Vecchio, <span class="font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
-                                <p>Under Review</p>
-                                <ul class="flex">
-                                    <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://arxiv.org/abs/2308.11408">Paper</a></li>
-                                    <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://gvecchio.com/matfuse/">Project Page</a></li>
-                                    <li class="text-indigo-500 font-bold rounded-2xl p-2 mr-6"><a href="https://github.com/giuvecchio/matfuse">Code</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="w-4/5" id="contact">
-                <h2 class="text-4xl">Contact</h2>
-                <p>You can reach me at <a class="text-indigo-500" href="mailto:rensortino@gmail.com">rensortino[at]gmail[dot]com</a></p>
             </section>
     </main>
 
-    <footer id="footer" class="text-center py-5">
+    <footer id="footer" class="tw-text-center tw-py-5">
         <p>&copy; Renato Sortino</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        function toggleClass(element) {
+            element.querySelector('i').classList.toggle("bi-caret-right-fill");
+            element.querySelector('i').classList.toggle("bi-caret-down-fill");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

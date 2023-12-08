@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  a {
+    @apply hover:tw-text-link md:hover:tw-underline;
+  }
+}
+
 @media (min-width: 768px) {
     .collapse.dont-collapse-md {
       display: block;
       height: auto !important;
       visibility: visible;
+      -webkit-transition: none;
+      transition: none;
     }
   }

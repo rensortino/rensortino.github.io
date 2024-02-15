@@ -24,12 +24,13 @@
                             <img class="tw-object-scale-down tw-w-full tw-rounded-t-3xl"  src="assets/images/trf-sg2im.gif">
                         </div>
                         <div class="tw-flex tw-justify-center">
-                            <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc1">
+                            <!-- <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc1"> -->
+                            <div class="tw-flex tw-items-center" onclick="toggleClass(this, document.querySelector('#proj-desc1'))">
                                 <h2 class="tw-p-2 tw-text-lg tw-font-bold">TRF-SG2IM</h2>
                                 <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                             </div>
                         </div>
-                        <div class="collapse dont-collapse-md md:show tw-py-2" id="proj-desc1">
+                        <div class="collapsed md:show tw-py-2" id="proj-desc1">
                             <div class="tw-flex tw-min-h-[100px] tw-items-center">
                                 <p class="tw-text-subtitle tw-p-2">Scene graph to image with transformers</p>
                             </div>                            
@@ -44,12 +45,13 @@
                             <img class="tw-w-full tw-rounded-t-3xl"  src="assets/images/radiff.gif">
                         </div>
                         <div class="tw-flex tw-justify-center">
-                            <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc2">
+                            <!-- <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc2"> -->
+                                <div class="tw-flex tw-items-center" onclick="toggleClass(this, document.querySelector('#proj-desc2'))">
                                 <h2 class="tw-p-2 tw-text-lg tw-font-bold">RADiff</h2>
                                 <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                             </div>
                         </div>
-                        <div class="collapse dont-collapse-md md:show tw-py-2" id="proj-desc2">
+                        <div class="collapsed md:show tw-py-2" id="proj-desc2">
                             <div class="tw-flex tw-min-h-[100px] tw-items-center">
                                 <p class="tw-text-subtitle tw-p-2">Conditional diffusion models for data augmentation in radio astronomy</p>
                             </div>
@@ -64,12 +66,13 @@
                             <img class="tw-rounded-t-3xl tw-w-full"  src="assets/images/matfuse.gif">
                         </div>
                         <div class="tw-flex tw-justify-center">
-                            <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc3">
+                            <!-- <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc3"> -->
+                                <div class="tw-flex tw-items-center" onclick="toggleClass(this, document.querySelector('#proj-desc3'))">
                                 <h2 class="tw-p-2 tw-text-lg tw-font-bold">MatFuse</h2>
                                 <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                             </div>
                         </div>
-                        <div class="collapse dont-collapse-md md:show tw-py-2" id="proj-desc3">
+                        <div class="collapsed md:show tw-py-2" id="proj-desc3">
                             <div class="tw-flex tw-min-h-[100px] tw-items-center">
                                 <p class="tw-text-subtitle tw-p-2">Multi-modal diffusion models for material generation</p>
                             </div>
@@ -84,17 +87,39 @@
                             <img class="tw-rounded-t-3xl tw-w-full"  src="assets/images/radio-tiramisu.png">
                         </div>
                         <div class="tw-flex tw-justify-center">
-                            <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc3">
+                            <!-- <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc3"> -->
+                                <div class="tw-flex tw-items-center" onclick="toggleClass(this, document.querySelector('#proj-desc4'))">
                                 <h2 class="tw-p-2 tw-text-lg tw-font-bold">Radio Tiramisu</h2>
                                 <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                             </div>
                         </div>
-                        <div class="collapse dont-collapse-md md:show tw-py-2" id="proj-desc3">
+                        <div class="collapsed md:show tw-py-2" id="proj-desc4">
                             <div class="tw-flex tw-min-h-[100px] tw-items-center">
                                 <p class="tw-text-subtitle tw-p-2">Tiramisu model for semantic segmentation in radio astronomy</p>
                             </div>
                             <a href="./projects/radio-tiramisu.html">
                                 <div class="tw-border-t tw-border-subtitle/20 tw-text-link tw-p-1" >Project Page</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tw-max-w-[400px] tw-w-full tw-py-8 tw-flex tw-flex-col tw-justify-center tw-text-center tw-rounded-3xl">
+                        <div class="tw-rounded-t-3xl">
+                            <img class="tw-rounded-t-3xl tw-w-full tw-max-h-[160px] tw-object-contain"  src="assets/images/clip-se.png">
+                        </div>
+                        <div class="tw-flex tw-justify-center">
+                            <!-- <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc3"> -->
+                                <div class="tw-flex tw-items-center" onclick="toggleClass(this, document.querySelector('#proj-desc5'))">
+                                <h2 class="tw-p-2 tw-text-lg tw-font-bold">CLIP Search Engine</h2>
+                                <i class="bi bi-caret-right-fill md:tw-hidden"></i>
+                            </div>
+                        </div>
+                        <div class="collapsed md:show tw-py-2" id="proj-desc5">
+                            <div class="tw-flex tw-min-h-[100px] tw-items-center">
+                                <p class="tw-text-subtitle tw-p-2">An image-to-image search engine using CLIP embeddings to find the most similar images to the provided one</p>
+                            </div>
+                            <a href="https://github.com/rensortino/clip-search-engine", target="_blankx">
+                                <div class="tw-border-t tw-border-subtitle/20 tw-text-link tw-p-1" >GitHub Repo</div>
                             </a>
                         </div>
                     </div>
@@ -108,7 +133,7 @@
             
     </main>
 
-    <footer id="footer" class="tw-w-screen tw-flex tw-flex-col tw-grow tw-justify-end tw-text-center tw-py-5">
+    <footer id="footer" class="tw-w-screen tw-flex tw-flex-col tw-grow tw-justify-end tw-text-center tw-py-5 tw-px-5">
         <p>Copyright &copy; <span id="year"></span> Renato Sortino. All rights reserved</p>
     </footer>
     <script src="script.js"></script>

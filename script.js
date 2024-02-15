@@ -12,7 +12,6 @@ function toggleClass(element, target) {
     else {
         target.classList.toggle("collapsible");
         target.classList.toggle("collapsed");
-        // target.style.display = target.style.display === "none" ? "block" : "none";
     
     }
 

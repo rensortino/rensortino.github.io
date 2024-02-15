@@ -1,3 +1,5 @@
+<!-- TODO Refactor tailwind classes -->
+<!-- TODO Maybe organize everything in React components-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link href="/dist/output.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     
 </head>
 <body class="tw-flex tw-flex-col tw-items-center tw-bg-gradient-to-b tw-from-stone-800 tw-to-zinc-800 tw-text-white">
@@ -48,12 +51,14 @@
                             <img class="tw-object-scale-down tw-w-full tw-rounded-t-3xl"  src="assets/images/trf-sg2im.gif">
                         </div>
                         <div class="tw-flex tw-justify-center">
-                            <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc1">
+                            <!-- <div class="tw-flex tw-items-center" onclick="toggleClass(this, document.querySelector('#proj-desc1'))" data-bs-toggle="collapse" data-bs-target="#proj-desc1"> -->
+                            <div class="tw-flex tw-items-center" onclick="toggleClass(this, document.querySelector('#proj-desc1'))">
                                 <h2 class="tw-p-2 tw-text-lg tw-font-bold">TRF-SG2IM</h2>
                                 <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                             </div>
                         </div>
-                        <div class="collapse dont-collapse-md md:show tw-py-2" id="proj-desc1">
+                        <!-- <div class="collapsed md:show tw-py-2" id="proj-desc1">  -->
+                        <div class="collapsed md:show tw-pb-2" id="proj-desc1"> 
                             <div class="tw-flex tw-min-h-[100px] tw-items-center">
                                 <p class="tw-text-subtitle tw-p-2">Scene graph to image with transformers</p>
                             </div>                            
@@ -68,12 +73,13 @@
                             <img class="tw-w-full tw-rounded-t-3xl"  src="assets/images/radiff.gif">
                         </div>
                         <div class="tw-flex tw-justify-center">
-                            <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc2">
+                            <!-- <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc2"> -->
+                            <div class="tw-flex tw-items-center" onclick="toggleClass(this, document.querySelector('#proj-desc2'))">
                                 <h2 class="tw-p-2 tw-text-lg tw-font-bold">RADiff</h2>
                                 <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                             </div>
                         </div>
-                        <div class="collapse dont-collapse-md md:show tw-py-2" id="proj-desc2">
+                        <div class="collapsed md:show tw-pb-2" id="proj-desc2">
                             <div class="tw-flex tw-min-h-[100px] tw-items-center">
                                 <p class="tw-text-subtitle tw-p-2">Conditional diffusion models for data augmentation in radio astronomy</p>
                             </div>
@@ -88,12 +94,14 @@
                             <img class="tw-rounded-t-3xl tw-w-full"  src="assets/images/matfuse.gif">
                         </div>
                         <div class="tw-flex tw-justify-center">
-                            <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc3">
+                            <!-- <div class="tw-flex tw-items-center" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#proj-desc3"> -->
+                                <div class="tw-flex tw-items-center" onclick="toggleClass(this, document.querySelector('#proj-desc3'))">
+
                                 <h2 class="tw-p-2 tw-text-lg tw-font-bold">MatFuse</h2>
                                 <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                             </div>
                         </div>
-                        <div class="collapse dont-collapse-md md:show tw-py-2" id="proj-desc3">
+                        <div class="collapsed md:show tw-pb-2" id="proj-desc3">
                             <div class="tw-flex tw-min-h-[100px] tw-items-center">
                                 <p class="tw-text-subtitle tw-p-2">Multi-modal diffusion models for material generation</p>
                             </div>
@@ -110,21 +118,22 @@
             </section>
             
             <section class="tw-w-4/5 tw-py-8 tw-flex tw-flex-col tw-items-center md:tw-items-start" id="publications">
-                <h2 class="tw-text-4xl tw-pb-8 tw-self-start">Selected Publications</h2>
+                <h2 class="tw-text-3xl tw-pb-8 md:tw-text-4xl tw-self-start">Selected Publications</h2>
 
                     <div class="tw-flex tw-py-4 tw-flex-col tw-justify-between tw-items-center md:tw-flex-row">
                         <div class="tw-w-8/12 tw-max-w-[300px] tw-mr-6 tw-hidden md:tw-block">
                             <img class="tw-w-full tw-rounded-3xl place-self-start"  src="assets/images/trf-sg2im.png">
                         </div>
                             <div class="tw-flex tw-flex-col tw-text-center md:tw-text-left tw-w-full tw-justify-around">
-                                <div class="tw-flex tw-justify-center md:tw-justify-start" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#pub-desc1">
+                                <div class="tw-flex tw-justify-center md:tw-justify-start" onclick="toggleClass(this, document.querySelector('#pub-desc1'))">
                                     <div class="tw-text-lg tw-font-semibold">
-                                        <a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017" class="hover:tw-text-link md:hover:tw-underline">Transformer-Based Image Generation from Scene Graphs</a>
+                                        <!-- <a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017" class="hover:tw-text-link md:hover:tw-underline">Transformer-Based Image Generation from Scene Graphs</a> -->
+                                        <h2>Transformer-Based Image Generation from Scene Graphs</h2>
                                     </div>
                                    
                                     <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                                 </div>
-                                <div class="collapse dont-collapse-md" id="pub-desc1">
+                                <div class="collapsed" id="pub-desc1">
                                     <p class="tw-italic"><span class="tw-font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
                                     <p class="tw-text-subtitle">Computer Vision and Image Understanding (Elsevier)</p>
                                     <ul class="tw-flex tw-items-center md:tw-items-start tw-justify-between md:tw-justify-start tw-py-2">
@@ -141,14 +150,16 @@
                             <img class="tw-w-full tw-rounded-3xl place-self-start"  src="assets/images/radiff.png">
                         </div>
                             <div class="tw-flex tw-flex-col tw-text-center md:tw-text-left tw-w-full tw-justify-around">
-                                <div class="tw-flex tw-justify-center md:tw-justify-start" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#pub-desc2">
+                                <!-- <div class="tw-flex tw-justify-center md:tw-justify-start" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#pub-desc2"> -->
+                                <div class="tw-flex tw-justify-center md:tw-justify-start" onclick="toggleClass(this, document.querySelector('#pub-desc2'))">
                                     <div class="tw-text-lg tw-font-semibold">
-                                        <a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017" class="md:hover:tw-underline hover:tw-text-link">RADiff: Controllable Diffusion Models for Radio Astronomical Maps Generation</a>
+                                        <h2>RADiff: Controllable Diffusion Models for Radio Astronomical Maps Generation</h2>
+                                        <!-- <a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017" class="md:hover:tw-underline hover:tw-text-link">RADiff: Controllable Diffusion Models for Radio Astronomical Maps Generation</a> -->
                                     </div>
                                    
                                     <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                                 </div>
-                                <div class="collapse dont-collapse-md" id="pub-desc2">
+                                <div class="collapsed" id="pub-desc2">
                                     <p class="tw-italic"><span class="tw-font-bold">Renato Sortino</span>, Thomas Cecconello, Andrea DeMarco, Giuseppe Fiameni et al.</p>
                                     <p class="tw-text-subtitle">arXiv Preprint</p>
                                     <ul class="tw-flex tw-items-center md:tw-items-start tw-justify-between md:tw-justify-start tw-py-2">
@@ -165,14 +176,16 @@
                             <img class="tw-w-full tw-rounded-3xl place-self-start"  src="assets/images/matfuse.gif">
                         </div>
                             <div class="tw-flex tw-flex-col tw-text-center md:tw-text-left tw-w-full tw-justify-around">
-                                <div class="tw-flex tw-justify-center md:tw-justify-start" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#pub-desc3">
+                                <!-- <div class="tw-flex tw-justify-center md:tw-justify-start" onclick="toggleClass(this)" data-bs-toggle="collapse" data-bs-target="#pub-desc3"> -->
+                                    <div class="tw-flex tw-justify-center md:tw-justify-start" onclick="toggleClass(this, document.querySelector('#pub-desc3'))">
                                     <div class="tw-text-lg tw-font-semibold">
-                                        <a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017" class="hover:tw-text-link md:hover:tw-underline">MatFuse: Controllable Material Generation with Diffusion Models</a>
+                                        <!-- <a href="https://www.sciencedirect.com/science/article/pii/S1077314223001017" class="hover:tw-text-link md:hover:tw-underline">MatFuse: Controllable Material Generation with Diffusion Models</a> -->
+                                        <h2>MatFuse: Controllable Material Generation with Diffusion Models</h2>
                                     </div>
                                    
                                     <i class="bi bi-caret-right-fill md:tw-hidden"></i>
                                 </div>
-                                <div class="collapse dont-collapse-md" id="pub-desc3">
+                                <div class="collapsed" id="pub-desc3">
                                     <p class="tw-italic">Giuseppe Vecchio, <span class="tw-font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
                                     <p class="tw-text-subtitle">arXiv Preprint</p>
                                     <ul class="tw-flex tw-items-center md:tw-items-start tw-justify-between md:tw-justify-start tw-py-2">
@@ -188,7 +201,7 @@
             </section>
 
             <section class="tw-w-4/5 tw-pb-8 tw-flex tw-flex-col tw-items-center" id="blog">
-                <h2 class="tw-text-4xl tw-pb-8 tw-self-start">Latest Blog Posts</h2>
+                <h2 class="tw-text-3xl tw-pb-8 md:tw-text-4xl tw-self-start">Latest Blog Posts</h2>
 
                 <ul class="tw-font-bold tw-items-center md:tw-w-11/12 tw-justify-evenly tw-py-2">
                     <li>
@@ -208,7 +221,7 @@
             </section>
     </main>
 
-    <footer id="footer" class="tw-w-screen tw-flex tw-flex-col tw-grow tw-justify-end tw-text-center tw-py-5">
+    <footer id="footer" class="tw-w-screen tw-flex tw-flex-col tw-grow tw-justify-end tw-text-center tw-py-5 tw-px-5">
         <p>Copyright &copy; <span id="year"></span> Renato Sortino. All rights reserved</p>
     </footer>
     <script src="script.js"></script>

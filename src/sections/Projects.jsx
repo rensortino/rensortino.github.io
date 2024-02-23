@@ -8,7 +8,7 @@ import MatFuseTeaser from "../assets/images/matfuse.gif"
 
 const Projects = () => {
   return (
-    <section className="tw-w-4/5 tw-py-8 tw-items-center" id="projects">
+    <section className="tw-scroll-mt-16 tw-w-4/5 tw-py-8 tw-items-center" id="projects">
         <h2 className="tw-text-3xl tw-pb-8 md:tw-text-4xl tw-self-start">Projects</h2>
         <div className="tw-flex tw-flex-wrap tw-justify-center md:tw-grid md:tw-place-content-center md:tw-gap-4 md:tw-grid-cols-3">
 

@@ -1,9 +1,12 @@
 import React from 'react';
 import proPic from '../assets/images/propic.jpg'
+import NavBar from '../components/NavBar';
 
 
 const Header = () => {
   return (
+    <>
+    <NavBar />
     <header className="tw-h-screen tw-w-screen tw-flex tw-flex-col md:tw-flex-row tw-place-items-center tw-justify-center md:tw-divide-x">
         <div className="tw-flex tw-w-4/5 tw-max-w-[400px] md:tw-w-2/5 tw-p-8 tw-items-center">
           <img className="tw-w-full tw-rounded-full" src={proPic} alt="Profile Picture" />
@@ -21,6 +24,7 @@ const Header = () => {
             </ul>
         </div>
     </header>
+    </>
   );
 };
 

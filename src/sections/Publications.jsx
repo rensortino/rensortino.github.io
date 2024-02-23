@@ -7,7 +7,7 @@ import MatFuseTeaser from "../assets/images/matfuse.gif"
 
 const Publications = () => {
   return (
-    <section className="tw-w-4/5 tw-py-8 tw-flex tw-flex-col tw-items-center md:tw-items-start" id="publications">
+    <section className="tw-scroll-mt-16 tw-w-4/5 tw-py-8 tw-flex tw-flex-col tw-items-center md:tw-items-start" id="publications">
         <h2 className="tw-text-3xl tw-pb-8 md:tw-text-4xl tw-self-start">Selected Publications</h2>
 
             <Publication 

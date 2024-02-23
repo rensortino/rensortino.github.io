@@ -3,7 +3,7 @@ import Post from '../components/Post'
 
 const Posts = () => {
   return (
-    <section className="tw-w-4/5 tw-py-8 tw-flex tw-flex-col tw-items-center md:tw-items-start" id="posts">
+    <section className="tw-scroll-mt-16 tw-w-4/5 tw-py-8 tw-flex tw-flex-col tw-items-center md:tw-items-start" id="posts">
         <h2 className="tw-text-3xl tw-pb-8 md:tw-text-4xl tw-self-start">Latest Blog Posts</h2>
           <ul className="tw-font-bold tw-items-center md:tw-w-11/12 tw-justify-evenly tw-py-2">
             <Post 

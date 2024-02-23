@@ -1,10 +1,10 @@
-import './App.css'
 import Header from './sections/Header'
 import About from './sections/About'
 import Projects from './sections/Projects'
 import Publications from './sections/Publications'
 import Posts from './sections/Posts'
 import News from './sections/News'
+import NavBar from './components/NavBar'
 
 
 function Home() {

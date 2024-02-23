@@ -1,5 +1,6 @@
 import React from 'react';
 import Project from '../components/Project'
+import { Link } from "react-router-dom";
 
 import trfTeaser from "../assets/images/trf-sg2im.gif"
 import RADiffTeaser from "../assets/images/radiff.gif"
@@ -32,7 +33,7 @@ const Projects = () => {
 
         </div>
         <div className="tw-flex tw-w-full tw-pt-8 tw-self-end tw-justify-end">
-            <a href="./projects" className="tw-p-2 tw-border tw-rounded-2xl tw-border-link hover:tw-text-link">More</a>
+            <Link to="/projects" className="tw-p-2 tw-border tw-rounded-2xl tw-border-link hover:tw-text-link">More</Link>
         </div>
     </section>
   );

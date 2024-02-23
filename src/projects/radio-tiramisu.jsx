@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const RadioTiramisu = () => {
     return (
@@ -78,7 +79,7 @@ const RadioTiramisu = () => {
                     <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6 tw-pt-2"><i className="bi bi-github tw-mr-2 tw-text-[16px] tw-w-auto"></i><a href="https://github.com/SKA-INAF/radio-tiramisu">Code</a></li>
                 </ul>
                 <div className="tw-flex tw-w-full tw-pt-8 tw-self-end tw-justify-end">
-                    <a href="/projects" className="tw-p-2 tw-border tw-rounded-2xl tw-border-link hover:tw-text-link">Go Back</a>
+                    <Link to="/projects" className="tw-p-2 tw-border tw-rounded-2xl tw-border-link hover:tw-text-link">Go Back</Link>
                 </div>
             </section>
     </main>

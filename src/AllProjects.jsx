@@ -1,5 +1,6 @@
 import React from 'react';
 import Project from './components/Project'
+import { Link } from "react-router-dom";
 
 import trfTeaser from "./assets/images/trf-sg2im.gif"
 import RADiffTeaser from "./assets/images/radiff.gif"
@@ -37,7 +38,7 @@ const AllProjects = () => {
               img={RadioTiramisuTeaser}
               title="Radio Tiramisu"
               subtitle="Tiramisu model for semantic segmentation in radio astronomy"
-              link="./projects/radio-tiramisu"
+              link="./radio-tiramisu"
             />
             <Project
               img={CLIPSETeaser}
@@ -48,7 +49,7 @@ const AllProjects = () => {
 
         </div>
         <div className="tw-flex tw-w-full tw-pt-8 tw-self-end tw-justify-end">
-            <a href="/" className="tw-p-2 tw-border tw-rounded-2xl tw-border-link hover:tw-text-link">Back</a>
+            <Link to=".." className="tw-p-2 tw-border tw-rounded-2xl tw-border-link hover:tw-text-link">Back</Link>
         </div>
     </section>
   );

@@ -1,28 +1,122 @@
-import React from 'react';
-// import { Link } from "react-router-dom";
-import { HashLink as Link } from 'react-router-hash-link';
+import React, { useState, useEffect } from "react";  
+import { HashLink as NavLink } from 'react-router-hash-link';
 
+import { IoClose, IoMenu } from "react-icons/io5";
+import { useMediaQuery } from "react-responsive";
+import "../Navbar.css";
 
 
 const NavBar = () => {
-  return (
-    <div className="tw-fixed tw-top-0 tw-w-full tw-flex tw-bg-stone-800 tw-flex-row-reverse tw-z-50">
-      <ul className="tw-flex tw-justify-around tw-p-5 tw-w-1/2">
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [navbarHeight, setNavbarHeight] = useState('100px'); // Initial navbar height
+  const isMobile = useMediaQuery({ maxWidth: "768px" });
+
+  useEffect(() => {
+    const changeNavbarHeight = () => {
+      if (window.scrollY >= 80) {
+        setNavbarHeight('70px'); // Reduced navbar height
+      } else {
+        setNavbarHeight('100px'); // Initial navbar height
+      }
+    }
+
+    window.addEventListener('scroll', changeNavbarHeight);
+    return () => {
+      window.removeEventListener('scroll', changeNavbarHeight);
+    }
+  }, []);
+
+
+  const toggleMenu = () => {
+    console.log(isMenuOpen)
+    setIsMenuOpen(!isMenuOpen);
+  };
+  const closeMobileMenu = () => {
+    console.log(isMobile)
+    if (isMobile) {
+      setIsMenuOpen(false);
+    }
+  };
+  const renderNavLinks = () => {
+    const listClassName = isMobile ? "nav__list" : "nav__list__web";
+    const linkClassName = "nav__link";
+    const buttonClassName = "nav__cta";
+    return (
+      <ul className={listClassName}>
         <li>
-          <Link to="#about" className="text-black hover:bg-gray-200 px-2 py-1">About</Link>
+          <NavLink
+            to="#about"
+            className={linkClassName}
+            onClick={closeMobileMenu}
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <Link to="#projects" className="text-black hover:bg-gray-200 px-2 py-1">Projects</Link>
+          <NavLink
+            to="#news"
+            className={linkClassName}
+            onClick={closeMobileMenu}
+          >
+            News
+          </NavLink>
         </li>
         <li>
-          <Link to="#publications" className="text-black hover:bg-gray-200 px-2 py-1">Publications</Link>
+          <NavLink
+            to="#projects"
+            className={linkClassName}
+            onClick={closeMobileMenu}
+          >
+            Projects
+          </NavLink>
         </li>
         <li>
-          <Link to="#posts" className="text-black hover:bg-gray-200 px-2 py-1">Posts</Link>
+          <NavLink
+            to="#publications"
+            className={linkClassName}
+            onClick={closeMobileMenu}
+          >
+            Publications
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="#posts"
+            className={linkClassName}
+            onClick={closeMobileMenu}
+          >
+            Posts
+          </NavLink>
         </li>
       </ul>
+    );
+  };
+  return (
+    <div className="header" style={{height: navbarHeight}}>
+      <nav className="nav container">
+        <NavLink to="/" className="nav__logo">
+          Renato Sortino
+        </NavLink>
+        {isMobile && (
+          <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
+            <IoMenu />
+          </div>
+        )}
+        {isMobile ? (
+          <div
+            className={`nav__menu  ${isMenuOpen ? "show-menu" : ""}`}
+            id="nav-menu"
+          >
+            {renderNavLinks()}
+            <div className="nav__close" id="nav-close" onClick={toggleMenu}>
+              <IoClose />
+            </div>
+          </div>
+        ) : (
+          renderNavLinks()
+        )}
+      </nav>
     </div>
   );
-}
-
+};
 export default NavBar;

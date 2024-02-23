@@ -28,9 +28,9 @@ class Publication extends Collapsible {
                         <p className="tw-italic"><span className="tw-font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
                         <p className="tw-text-subtitle">{this.props.journal}</p>
                         <ul className="tw-flex tw-items-center md:tw-items-start tw-justify-around md:tw-justify-start tw-py-2">
-                            <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6"><a href={this.props.paperLink}>Paper</a></li>
-                            <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6"><a href={this.props.projectPage}>Project Page</a></li>
-                            <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6"><a href={this.props.github}>Code</a></li>
+                            <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6"><a href={this.props.paperLink} target="_blank">Paper</a></li>
+                            <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6"><a href={this.props.projectPage} target="_blank">Project Page</a></li>
+                            <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6"><a href={this.props.github} target="_blank">Code</a></li>
                         </ul>
                     </div>
                 </div>

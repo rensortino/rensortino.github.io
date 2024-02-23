@@ -66,17 +66,17 @@ const RadioTiramisu = () => {
                 <ul className="tw-flex tw-flex-col tw-py-2 xs:tw-flex-row">
                     <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6 tw-pt-2">
                         <i className="bi bi-file-earmark-text-fill tw-h-[16px]"></i>
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-030-89691-1_38">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-030-89691-1_38" target="_blank">
                             Paper
                         </a>
                     </li>
                     <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6 tw-pt-2">
                         <div className="tw-flex tw-items-center">
                             <img className="emoji tw-h-[16px] tw-w-auto tw-mr-2" title=":hugs:" alt=":hugs:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f917.png" height="20" width="20" />
-                            <a href="https://huggingface.co/spaces/rsortino/radio-tiramisu" className="tw-flex tw-items-center">HF Spaces Demo</a>
+                            <a href="https://huggingface.co/spaces/rsortino/radio-tiramisu" className="tw-flex tw-items-center" target="_blank">HF Spaces Demo</a>
                         </div>
                     </li>
-                    <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6 tw-pt-2"><i className="bi bi-github tw-mr-2 tw-text-[16px] tw-w-auto"></i><a href="https://github.com/SKA-INAF/radio-tiramisu">Code</a></li>
+                    <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6 tw-pt-2"><i className="bi bi-github tw-mr-2 tw-text-[16px] tw-w-auto"></i><a href="https://github.com/SKA-INAF/radio-tiramisu" target="_blank">Code</a></li>
                 </ul>
                 <div className="tw-flex tw-w-full tw-pt-8 tw-self-end tw-justify-end">
                     <Link to="/projects" className="tw-p-2 tw-border tw-rounded-2xl tw-border-link hover:tw-text-link">Go Back</Link>

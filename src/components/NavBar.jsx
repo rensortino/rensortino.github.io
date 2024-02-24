@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";  
+import { Link as ScrollLink, animateScroll as scroll, Events } from 'react-scroll';
 import { HashLink as NavLink } from 'react-router-hash-link';
-
 import { IoClose, IoMenu } from "react-icons/io5";
 import { useMediaQuery } from "react-responsive";
 import "../Navbar.css";
 
-
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState('100px'); // Initial navbar height
+  const [activeLink, setActiveLink] = useState("about");
   const isMobile = useMediaQuery({ maxWidth: "768px" });
+
+  const sections = ['about', 'news', 'projects', 'publications', 'posts'];
 
   useEffect(() => {
     const changeNavbarHeight = () => {
@@ -20,74 +22,57 @@ const NavBar = () => {
       }
     }
 
+    const handleScroll = () => {
+      let currentSection = "";
+      sections.forEach((id) => {
+        const element = document.getElementById(id);
+        console.log(element)
+        console.log(id)
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom >= 0) {
+          currentSection = id;
+        }
+      });
+      setActiveLink(currentSection);
+    };
+
     window.addEventListener('scroll', changeNavbarHeight);
+    window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', changeNavbarHeight);
+      window.removeEventListener('scroll', handleScroll);
     }
   }, []);
 
-
   const toggleMenu = () => {
-    console.log(isMenuOpen)
     setIsMenuOpen(!isMenuOpen);
   };
   const closeMobileMenu = () => {
-    console.log(isMobile)
     if (isMobile) {
       setIsMenuOpen(false);
     }
   };
   const renderNavLinks = () => {
     const listClassName = isMobile ? "nav__list" : "nav__list__web";
-    const linkClassName = "nav__link";
-    const buttonClassName = "nav__cta";
+    const linkClassName = "nav__link hover:tw-text-link";
     return (
       <ul className={listClassName}>
-        <li>
-          <NavLink
-            to="#about"
-            className={linkClassName}
-            onClick={closeMobileMenu}
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="#news"
-            className={linkClassName}
-            onClick={closeMobileMenu}
-          >
-            News
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="#projects"
-            className={linkClassName}
-            onClick={closeMobileMenu}
-          >
-            Projects
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="#publications"
-            className={linkClassName}
-            onClick={closeMobileMenu}
-          >
-            Publications
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="#posts"
-            className={linkClassName}
-            onClick={closeMobileMenu}
-          >
-            Posts
-          </NavLink>
-        </li>
+        {sections.map((section) => (
+          <li key={section}>
+            <ScrollLink
+              activeClass="active"
+              to={section}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className={linkClassName + (activeLink === section ? " active" : "")}
+              onClick={closeMobileMenu}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </ScrollLink>
+          </li>
+        ))}
       </ul>
     );
   };

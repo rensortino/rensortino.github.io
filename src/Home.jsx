@@ -14,7 +14,7 @@ function Home() {
     <Header />
     <main className="tw-flex tw-flex-col tw-items-center tw-max-w-[1024px]">
       <About />
-      <News />
+      {/* <News /> */}
       <Projects />
       <Publications />
       <Posts />

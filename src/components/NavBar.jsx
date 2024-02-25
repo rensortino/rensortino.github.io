@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";  
+import React, { useState, useEffect, useRef } from "react";  
 import { Link as ScrollLink, animateScroll as scroll, Events } from 'react-scroll';
 import { HashLink as NavLink } from 'react-router-hash-link';
 import { IoClose, IoMenu } from "react-icons/io5";
@@ -8,10 +8,13 @@ import "../Navbar.css";
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState('100px'); // Initial navbar height
-  const [activeLink, setActiveLink] = useState("about");
+  const [activeLink, setActiveLink] = useState("");
   const isMobile = useMediaQuery({ maxWidth: "768px" });
+  const navRef = useRef(null);
 
-  const sections = ['about', 'news', 'projects', 'publications', 'posts'];
+  const sections = ['about', 'news', 'projects', 'publications'];
+
+  const offset = -70;
 
   useEffect(() => {
     const changeNavbarHeight = () => {
@@ -22,14 +25,15 @@ const NavBar = () => {
       }
     }
 
+
+
     const handleScroll = () => {
       let currentSection = "";
       sections.forEach((id) => {
         const element = document.getElementById(id);
-        console.log(element)
-        console.log(id)
         const rect = element.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom >= 0) {
+        console.log(rect.top, rect.bottom, id, (rect.top < -offset && rect.bottom > -offset));
+        if (rect.top < -offset && rect.bottom > -offset) {
           currentSection = id;
         }
       });
@@ -47,10 +51,18 @@ const NavBar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const getClass = (element, className, activeLink, section) => {
+    console.log(element);
+    return className.includes("active") ? className : className + (activeLink === section ? " active" : "")
+  } 
+
   const closeMobileMenu = () => {
     if (isMobile) {
       setIsMenuOpen(false);
     }
+    // el.classList.remove('active')
+    // console.log(el.classList.remove('active'));
   };
   const renderNavLinks = () => {
     const listClassName = isMobile ? "nav__list" : "nav__list__web";
@@ -62,12 +74,12 @@ const NavBar = () => {
             <ScrollLink
               activeClass="active"
               to={section}
-              spy={true}
+              // spy={true}
               smooth={true}
-              offset={-70}
+              offset={offset+1}
               duration={500}
-              className={linkClassName + (activeLink === section ? " active" : "")}
-              onClick={closeMobileMenu}
+              className={getClass(this, linkClassName, activeLink, section)}
+              onClick={closeMobileMenu()}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </ScrollLink>
@@ -77,7 +89,7 @@ const NavBar = () => {
     );
   };
   return (
-    <div className="header" style={{height: navbarHeight}}>
+    <div ref={navRef} className="header" style={{height: navbarHeight}}>
       <nav className="nav container">
         <NavLink to="/" className="nav__logo">
           Renato Sortino

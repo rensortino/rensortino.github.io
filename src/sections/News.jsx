@@ -7,6 +7,10 @@ const News = () => {
         <h2 className="tw-text-3xl tw-pb-8 md:tw-text-4xl tw-self-start">News</h2>
           <ul className="tw-font-bold tw-items-center md:tw-w-11/12 tw-justify-evenly tw-py-2">
             <Post 
+              date="Mar 2024"
+              title="Our paper MatFuse has been accepted to CVPR 2024"
+            />
+            <Post 
               date="Nov 2023"
               title="I successfully defended my PhD thesis at the University of Catania!"
             />

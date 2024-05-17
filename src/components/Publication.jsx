@@ -25,7 +25,19 @@ class Publication extends Collapsible {
                         <i className="bi bi-caret-right-fill md:tw-hidden" ref={this.caretRef}></i>
                     </div>
                     <div className="collapsed" ref={this.DescRef}>
-                        <p className="tw-italic"><span className="tw-font-bold">Renato Sortino</span>, Simone Palazzo, Concetto Spampinato</p>
+                    
+                        <p className="tw-italic">
+                        {this.props.authors.map(function(author, i){
+                            if (author == "Renato Sortino") {
+                                author = <b>{author}</b>
+                            }
+                            if (i != 0)  {
+                                author = <>, {author}</>
+                            }
+                            console.log(author)
+                            // console.log(len(this.props.authors))
+                            return <span key={i} >{author}</span>;
+                        })} </p>
                         <p className="tw-text-subtitle">{this.props.journal}</p>
                         <ul className="tw-flex tw-items-center md:tw-items-start tw-justify-around md:tw-justify-start tw-py-2">
                             <li className="tw-text-link tw-font-semibold tw-rounded-2xl tw-mr-6"><a href={this.props.paperLink} target="_blank">Paper</a></li>

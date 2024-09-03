@@ -23,7 +23,7 @@ const Publications = () => {
               img={RADiffTeaser}
               authors={["Renato Sortino", "Thomas Cecconello", "Andrea De Marco", "Giuseppe Fiameni", "et al."]}
               subtitle="RADiff: Controllable Diffusion Models for Radio Astronomical Maps Generation"
-              journal="arXiv Preprint"
+              journal="IEEE Transaction on Artificial Intelligence"
               paperLink="https://arxiv.org/abs/2307.02392"
               projectPage="https://rensortino.github.io/radiff/"
               github="https://github.com/SKA-INAF/radiff/"

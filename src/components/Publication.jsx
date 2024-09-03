@@ -34,8 +34,6 @@ class Publication extends Collapsible {
                             if (i != 0)  {
                                 author = <>, {author}</>
                             }
-                            console.log(author)
-                            // console.log(len(this.props.authors))
                             return <span key={i} >{author}</span>;
                         })} </p>
                         <p className="tw-text-subtitle">{this.props.journal}</p>
